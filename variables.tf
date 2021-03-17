@@ -1,6 +1,6 @@
 variable "region" {
   type    = string
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "profile" {
@@ -23,4 +23,10 @@ variable "prefix" {
   type        = string
   default     = ""
   description = "prefix to use relative to workspace"
+}
+
+variable "use_deployment_user" {
+    type = bool
+    default = false
+    description = "option to create an IAM user and attach a policy for use with a github action for deployment on push"
 }
